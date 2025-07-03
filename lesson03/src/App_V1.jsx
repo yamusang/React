@@ -10,9 +10,16 @@ import {
   MdRemoveCircleOutline,
 } from "react-icons/md";
 
+// day3_02 : 배열 상태값 변경을 UI로 구현
+//  => components 폴더에서 컴포넌트로 만들어서 리팩토링
+// (day3_03)
 // 추가 패키지 설치 :   npm i sass react-icons
 
 function App() {
+
+  const renderCount = useRef(0) // useRef는 리액트 함수(훅)
+  renderCount.current +=1
+
   // 할일 목록 배열
   const initVal = [
     {
@@ -140,6 +147,7 @@ function App() {
           </div>
         </div>
       </div>
+      <div>렌더링 카운트:{renderCount.current}</div>
     </div>
   );
 }
