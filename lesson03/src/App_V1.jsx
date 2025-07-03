@@ -117,7 +117,7 @@ function App() {
               value={value}
               onChange={(e) => setValue(e.target.value)}
             />
-            {/* type = "submit" 버튼 클릭은 onSubmi 이벤트 발생 => form태그에서  함수 실행 */}
+            {/* type = "submit" 버튼 클릭은 onSubmit 이벤트 발생 => form태그에서  함수 실행 */}
             <button type="submit">
               <MdAdd />
             {/* type button이면 onclick이벤트 발생 */}
