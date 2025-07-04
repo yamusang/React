@@ -1,0 +1,49 @@
+[
+  {
+    "_id": "68661b9a2510dd8818c5c096",
+    "id": 1,
+    "text": "리액트 수업 복습",
+    "checked": true
+  },
+  {
+    "_id": "68661b9a2510dd8818c5c097",
+    "id": 2,
+    "text": "리액트 프로젝트 기획",
+    "checked": "true"
+  },
+  {
+    "_id": "68663492997b7db059ffd892",
+    "id": 6,
+    "text": "운동하기",
+    "checked": false,
+    "createdAt": "2025-07-03T07:43:14.913Z"
+  },
+  {
+    "_id": "686634bb997b7db059ffd893",
+    "id": 7,
+    "text": "노션 학습",
+    "checked": false,
+    "createdAt": "2025-07-03T07:43:55.317Z"
+  },
+  {
+    "_id": "6866378f9b2c48cdea307b55",
+    "id": 8,
+    "text": "노션 학습",
+    "checked": false,
+    "createdAt": "2025-07-03T07:55:59.123Z"
+  },
+  {
+    "_id": "6866436e913cd7c4a4704325",
+    "id": 9,
+    "text": "도카라열도 탐방",
+    "checked": false,
+    "createdAt": "2025-07-03T08:46:38.351Z"
+  },
+  {
+    "_id": "68664398913cd7c4a4704326",
+    "id": 10,
+    "text": "CS 학습",
+    "checked": false,
+    "createdAt": "2025-07-03T08:47:20.298Z"
+  }
+]
