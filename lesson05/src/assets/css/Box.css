@@ -1,7 +1,0 @@
-div#box{
-            width: 150px;
-            height: 150px;
-            background-color: cadetblue;
-            /* box요소의 좌표(위치) 변경하기 위함 */
-            position: absolute;
-        }
