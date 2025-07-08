@@ -107,20 +107,20 @@ app.put("/api/schedules/:date", async (req, res) => {
 
       res.status(200).json({
         message: "새 todo 항목이 추가되었습니다.",
-        modifiedCount: result.modifiedCount,
+        modifiedCount: result.modifiedCount
       });
     } else {
       // 문서가 존재하지 않으면 새 문서 생성
       const newDoc = {
         date: date,
-        todos: [newTodo],
+        todos: [newTodo]
       };
 
       const result = await collection.insertOne(newDoc);
 
       res.status(201).json({
         message: "새 날짜 문서와 todo 항목이 생성되었습니다.",
-        insertedId: result.insertedId,
+        insertedId: result.insertedId
       });
     }
   } catch (error) {
