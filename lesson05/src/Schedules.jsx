@@ -99,7 +99,7 @@ export default function Schedules() {
     // 더 좋은 코드입니다. (why? 여러 속성값을 복사하는 경우가 많기 때문에)
     const updatedSchedule = {
       ...selectedSchedule,
-      todos: newtodos,
+      todos: newtodos
     };
     setSelectedSchedule(updatedSchedule);
 
