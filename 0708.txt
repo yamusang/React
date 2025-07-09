@@ -1,0 +1,7 @@
+1. 캘린더에 날짜를 클릭하면 (이벤트 함수 실행)
+
+2. 이벤트 함수는 클릭한 날짜를 문자열로 바꿉니다.
+   yyyy-mm-dd문자열로 해당 날짜의 스케쥴 데이터를 백엔드(nodejs) 서버에서 가져옵니다.
+   3번의 재렌더링을 위해서 selectedSchedule 상태값을 변경해야 합니다.
+
+3. 날짜를 클릭할 때 재렌더링은 오른쪽의 todoCardList 컴포넌트. selectedSchedule.todos

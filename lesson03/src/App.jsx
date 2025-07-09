@@ -13,21 +13,25 @@ export default function App() {
    const initVal = [
       {
         id: 1,
+        today: "2025-07-03",
         text: "리액트 수업 복습",
         checked: true,
       },
       {
         id: 2,
+        today: "2025-07-03",
         text: "리액트 프로젝트 기획",
         checked: false,
       },
       {
         id: 3,
+        today: "2025-07-03",
         text: "데이터베이스 테스트",
         checked: true,
       },
     ];
     const [todos, setTodos] = useState(initVal);
+    const [today, setToday] = useState();
     const maxid = useRef(todos.length + 1);
   
   
@@ -58,6 +62,7 @@ export default function App() {
       maxid.current += 1;
     };
   
+   
   
   return (
     <div>
@@ -65,12 +70,14 @@ export default function App() {
         {/* TodoInsert, TodoList 컴포넌트 
         => TodoTemplate 컴포넌트의 children속성으로 사용할 수 있습니다.*/}
         {/* 속성 이름은 개발자가 정합니다.. 속성의 값은 정의된 것으로 해야합니다. */}
+        <h2>{today}</h2>
         <TodoInsert onInsert={handleInsert}></TodoInsert>
         <TodoList
           todos={todos} onRemove={handleRemove} onChecked={handleChecked}
         ></TodoList>
       </TodoTemplate>
-      <div>렌더링 카운트 : {renderCount.current}</div>
+      <hr />
+      <input type="date" onChange={(e)=>setToday(e.target.value)} />
 
     </div>
   )

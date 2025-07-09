@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Box.css";
+import { Map, MapMarker } from 'react-kakao-maps-sdk';
 
 export default function Box() {
 
@@ -7,7 +8,6 @@ export default function Box() {
   const [boxheight, setHeight] = useState(100);
   const [posLeft, setLeft] = useState(800);
   const [posTop, setTop] = useState(300);
-
 
   function handleResize(e) {
     if (e.target.id === "width_inc") {
@@ -47,6 +47,7 @@ export default function Box() {
     <>
       <NavBar></NavBar>
       <DaumVideo></DaumVideo>
+        <KakaoMapComponent latitude={"35.2229"} longitude={"128.5820"}></KakaoMapComponent>
       <div id="buttons">
         <button onClick={handleResize} id="width_inc">
           로고 가로+
@@ -373,3 +374,36 @@ function DaumVideo() {
     </div>
   );
 }
+
+const KakaoMapComponent = ({ latitude, longitude }) => {
+  const mapRef = useRef(null);
+
+  useEffect(() => {
+    // 지도 초기화 및 설정 (필요한 경우)
+    if (window.kakao && window.kakao.maps) {
+      const container = mapRef.current;
+      const options = {
+        center: new window.kakao.maps.LatLng(latitude, longitude),
+        level: 3,
+      };
+      const map = new window.kakao.maps.Map(container, options);
+
+      // 마커 추가
+      new window.kakao.maps.Marker({
+        map: map,
+        position: new window.kakao.maps.LatLng(latitude, longitude),
+      });
+    }
+  }, [latitude, longitude]);
+
+
+  return (
+    <div id= "map" style={{ width: '500px', height: '400px' }}>
+      {window.kakao && window.kakao.maps ? (
+        <div ref={mapRef} style={{ width: '100%', height: '100%' }} ></div>
+      ) : (
+          <div>카카오 맵 로딩 중...</div>
+      )}
+    </div>
+  );
+};

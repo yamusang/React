@@ -156,6 +156,7 @@ a {
   align-items: center;
   justify-content: center;
   position: relative;
+  top: 80px;
 }
 
 #box{
@@ -163,7 +164,8 @@ a {
 }
 
 #buttons{
-  height: 300px;
+  position: relative;
+  top: 200px;
 }
 .submenu{
   display: flex;
@@ -176,4 +178,10 @@ a {
 }
 #ticket{
   cursor: pointer;
+}
+
+#map{
+  position: relative;
+  top: 180px;
+  left: 350px;
 }
